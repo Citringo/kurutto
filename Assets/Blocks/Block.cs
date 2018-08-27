@@ -17,9 +17,10 @@ namespace Xeltica.Kurutto
 		/// </summary>
 		public virtual void Update()
 		{
-			if (IsClicked() || IsTapped())
+			if (!GameMaster.Instance.IsPlaying && (IsClicked() || IsTapped()))
 			{
 				transform.Rotate(Vector3.forward * 90);
+				GameMaster.Instance.PlayClick();
 			}
 		}
 
@@ -36,8 +37,7 @@ namespace Xeltica.Kurutto
 		{
 			return Input.touches
 				.Where(t => t.phase == TouchPhase.Began)
-				.Select(t => Camera.current.ScreenPointToRay(t.position))
-				.Select(ray => Physics2D.Raycast(ray.origin, ray.direction))
+				.Select(t => Physics2D.Raycast(GameMaster.Instance.Camera.ScreenToWorldPoint(t.position), Vector2.zero))
 				.Any(info => info.collider.gameObject == this);
 		}
 
