@@ -12,7 +12,8 @@ namespace Xeltica.Kurutto
 
 			if (rb == null) return;
 
-			rb.AddForce(transform.up * 100);
+			rb.AddForce(transform.up * 500);
+			GameMaster.Instance.PlayForce();
 		}
 	}
 }

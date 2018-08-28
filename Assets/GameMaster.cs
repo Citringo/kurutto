@@ -61,6 +61,9 @@ namespace Xeltica.Kurutto
 		[SerializeField]
 		AudioClip sfxClick;
 
+		[SerializeField]
+		AudioClip sfxForce;
+
 		[Header("GUI")]
 
 		[SerializeField]
@@ -220,6 +223,18 @@ namespace Xeltica.Kurutto
 		}
 
 		public void PlayClick() => aud.PlayOneShot(sfxClick);
+		public void PlayForce() => StartCoroutine(PlayForceImpl());
+
+
+		bool isPlayingForce;
+		private IEnumerator PlayForceImpl()
+		{
+			if (isPlayingForce) yield break;
+			isPlayingForce = true;
+			aud.PlayOneShot(sfxForce);
+			yield return new WaitForSeconds(1);
+			isPlayingForce = false;
+		}
 
 
 	}

@@ -623,7 +623,7 @@ PlayerSettings:
   cloudServicesEnabled:
     UNet: 1
   facebookSdkVersion: 7.9.4
-  apiCompatibilityLevel: 2
+  apiCompatibilityLevel: 3
   cloudProjectId: 0d5e76a3-0a59-41e4-bf94-b3d5ff517986
   projectName: Kurutto
   organizationId: citringo

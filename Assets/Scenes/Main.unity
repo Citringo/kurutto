@@ -311,6 +311,7 @@ MonoBehaviour:
   sfxClear: {fileID: 8300000, guid: 70af685fc2fde5c48b93ce3a44d0164b, type: 3}
   sfxFailed: {fileID: 8300000, guid: e7966c20e5025df4ab513c5658e3920e, type: 3}
   sfxClick: {fileID: 8300000, guid: cc24c386e4be1d24d95be80b943142da, type: 3}
+  sfxForce: {fileID: 8300000, guid: fa4ba4274a1e5094b95426ffb6d1b7b2, type: 3}
   clearGui: {fileID: 175198982}
   failedGui: {fileID: 1840918069}
   maps:

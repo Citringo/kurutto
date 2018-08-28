@@ -7,7 +7,8 @@ namespace Xeltica.Kurutto
 	{
 		public abstract void OnTrigger(Collision2D collision);
 
-		public void OnCollisionStay2D(Collision2D collision)
+
+		public void OnCollisionEnter2D(Collision2D collision)
 		{
 			OnTrigger(collision);
 		}
