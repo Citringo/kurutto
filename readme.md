@@ -8,13 +8,13 @@ Kurutto is a physical puzzle game.
 
 `git clone https://github.com/citringo/kurutto`
 
-2. Open with Unity 2018.2
+2. Open with Unity 2018.2.5
 
 3. Just run!
 
 ## Requirement
 
-- Unity 2018.2.0
+- Unity 2018.2.5
 
 ## LICENSE
 
